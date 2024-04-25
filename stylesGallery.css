@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.home-button {
+  position: absolute;
+  user-select: none;
+  top: 3px;
+  right: 8px;
+  text-decoration: none;
+  color: #2e2e2e;
+  font-weight: 500;
+  font-size: 1.12rem;
+  background: transparent;
+  border: 3px solid rgb(194, 194, 194);
+  padding: 5px 8px;
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+.home-button:hover{
+  transform: scale(1.1);
+  border: 3px solid rgb(133, 133, 133);
+  background: rgba(121, 121, 121, 0.3);
+  color: rgb(0, 0, 0);
+
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.wrapper h1 {
+  margin: 20px auto;
+  user-select: none;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 40px;
+  color: rgb(0, 0, 0);
+  border-top: 5px solid;
+  border-bottom: 5px solid;
+}
+
+.card {
+  width: 32%;
+  overflow: hidden;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  filter: grayscale(100%);
+  object-fit: cover;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 10px #333);
+}
+
+.card:hover img {
+    filter: grayscale(0);
+}
+
+.card figcaption{
+  user-select: none;
+    position: absolute;
+    bottom: 0;
+    width: fit-content;
+    height: 16%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    color: #fff;
+    padding: 25px;
+    opacity: 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.card:hover figcaption{
+    opacity: 1;
+    bottom: 40%;
+    transition: 1s;
+}
